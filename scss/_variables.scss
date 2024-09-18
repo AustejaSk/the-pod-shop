@@ -1,0 +1,63 @@
+$primary-font: "Poppins", sans-serif;
+$primary-color: #473BF0;
+$black-color: #161C2D;
+$mobile-breakpoint: 480px;
+$tablet-breakpoint: 900px;
+
+@mixin button($padding) {
+    padding: $padding;
+    background-color: $primary-color;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    font-family: $primary-font;
+    font-size: to-em(17);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover,
+    &:focus {
+        background-color: darken($primary-color, 15%);
+        transform: scale(1.02);
+    }
+}
+
+@function to-em($val-px) {
+    @return calc($val-px / 16) + em;
+}
+
+@mixin subheading($color) {
+    margin: 0;
+    font-size: to-em(19);
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    @if $color == "dark" {
+        color: #161C2D;
+        opacity: 70%;
+    }
+
+    @if $color == "light" {
+        color: #ffffff;
+        opacity: 80%;
+    }
+
+    @include respond-to(tablet) {
+        font-size: to-em(25);
+    }
+}
+
+@mixin respond-to($media) {
+    @if $media == mobile {
+        @media (max-width: $mobile-breakpoint) {
+            @content;
+        }
+    }
+
+    @if $media == tablet {
+        @media (min-width: $mobile-breakpoint) and (max-width: $tablet-breakpoint) {
+            @content;
+        }
+    }
+}
