@@ -252,6 +252,9 @@ html:not([data-scroll="0"]) header {
   font-size: 0.9375em;
   font-weight: 700;
 }
+.footer__links li > a:focus, .footer__links li > a:hover {
+  color: #473BF0;
+}
 @media (max-width: 480px) {
   .footer {
     flex-direction: column;

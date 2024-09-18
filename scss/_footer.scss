@@ -19,6 +19,10 @@
         li > a {
             font-size: to-em(15);
             font-weight: 700;
+
+            &:focus, &:hover {
+                color: $primary-color;
+            }
         }
     }
 
