@@ -757,6 +757,9 @@ html:not([data-scroll="0"]) header {
     overflow: auto;
     scrollbar-width: none;
   }
+  .products__container::-webkit-scrollbar {
+    display: none;
+  }
   .products__product__btn {
     width: 100%;
   }
@@ -775,6 +778,9 @@ html:not([data-scroll="0"]) header {
     padding: 60px 32px 0;
     overflow: auto;
     scrollbar-width: none;
+  }
+  .products__container::-webkit-scrollbar {
+    display: none;
   }
   .products__container__product__btn {
     font-size: 1.25em;
