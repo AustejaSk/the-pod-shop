@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 * {
@@ -142,18 +143,18 @@ a {
     transform: translate(-50%);
     background-color: #473BF0;
     color: #ffffff;
-    width: 90%;
-    padding: 15px 16px;
+    width: 80%;
+    padding: 10px 16px;
     border-radius: 8px;
     transition: opacity 0.3s ease-in-out;
   }
   .header__nav {
     flex-direction: column;
     text-align: center;
-    gap: 30px;
+    gap: 20px;
   }
   .header__nav li {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     border-bottom: 1px solid white;
   }
   .header__nav li:last-of-type {
@@ -161,7 +162,7 @@ a {
     padding-bottom: 0;
   }
   .header__nav a {
-    font-size: 1.125em;
+    font-size: 1em;
   }
   .header__nav a:hover, .header__nav a:focus {
     color: #ffffff;
@@ -193,23 +194,21 @@ a {
     position: absolute;
     justify-content: flex-end;
     top: 115px;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%);
+    right: 32px;
     background-color: #473BF0;
     color: #ffffff;
-    width: 70%;
-    padding: 20px 32px;
+    width: 50%;
+    padding: 15px 32px;
     border-radius: 8px;
     transition: opacity 0.3s ease-in-out;
   }
   .header__nav {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
   }
   .header__nav li {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     border-bottom: 1px solid white;
   }
   .header__nav li:last-of-type {
@@ -217,7 +216,7 @@ a {
     padding-bottom: 0;
   }
   .header__nav a {
-    font-size: 1.375em;
+    font-size: 1.25em;
   }
   .header__nav a:hover, .header__nav a:focus {
     color: #ffffff;
@@ -756,6 +755,7 @@ html:not([data-scroll="0"]) header {
     gap: 30px;
     padding: 60px 16px 0;
     overflow: auto;
+    scrollbar-width: none;
   }
   .products__product__btn {
     width: 100%;
@@ -774,6 +774,7 @@ html:not([data-scroll="0"]) header {
     gap: 80px;
     padding: 60px 32px 0;
     overflow: auto;
+    scrollbar-width: none;
   }
   .products__container__product__btn {
     font-size: 1.25em;
